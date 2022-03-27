@@ -82,6 +82,7 @@
   font-size: 16px;
   text-transform: lowercase;
   transition: all 0.2s ease-in-out;
+  z-index: 1000;
 }
 
 .app-contact:hover{
