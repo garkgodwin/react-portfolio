@@ -66,7 +66,7 @@ const Navbar = () => {
   return (
     <nav className="Navbar">
       <button className="navbar-logo">
-        <span className="gradient-text">G</span>
+        <span className="logo">G</span>
       </button>
       <div className="navbar-middle">
         <button className="navbar-menu-toggle" onClick={(e) => moveMenu(e)}>
@@ -94,7 +94,7 @@ const Navbar = () => {
           })}
         </div>
       </div>
-      <Button cb={resumeClicked} text="Resume" />
+      <Button cb={resumeClicked} text="Resume" cName="btn-navbar" />
     </nav>
   );
 };

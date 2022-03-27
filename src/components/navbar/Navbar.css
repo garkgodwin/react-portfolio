@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 40px !important;
   height: 40px;
   border-radius: 50%;
   box-shadow: 0 0 16px var(--color-10);
@@ -26,6 +26,12 @@
   font-family: 'Chakra Petch', sans-serif;
   font-size: 24px;
   z-index: 1000;
+  padding: 12px;
+}
+
+.navbar-logo{
+  width: 40px;
+  height: 40px;
 }
 
 /* NAVBAR MIDDLE */
@@ -100,12 +106,12 @@
     margin: 0;
     padding: 8px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .navbar-menu-toggle{
     display: block;
   }
-
   .navbar-menu{
     opacity: 0.3;
     flex-direction: column;

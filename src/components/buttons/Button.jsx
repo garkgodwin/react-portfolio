@@ -1,17 +1,17 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ text, cb }) => {
+const Button = ({ text, cb, cName = "" }) => {
   return (
     <button
-      className="Button"
+      className={"Button " + cName}
       onClick={(e) => {
         e.preventDefault();
         cb();
       }}
     >
       <div className="button-bg"></div>
-      {text}
+      <span className="button-text">{text}</span>
     </button>
   );
 };

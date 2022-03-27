@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 //? Styles
@@ -14,10 +14,19 @@ import Projects from "./pages/Projects";
 
 //? Images
 import marker from "./assets/marker.svg";
+import Loading from "./Loading";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.classList.add("body-active");
+    }, 3500);
+  }, []);
   return (
-    <div className="App">
+    <div className={"App" + (!isLoading ? " app-active" : "")}>
+      <Loading isLoading={isLoading} />
       <Navbar />
       <Routes>
         <Route path="/" element={<About />} />

@@ -10,6 +10,18 @@
   padding: 0;
 }
 
+.App nav *, .App main *, .App .line-app, .App .app-contact{
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.App.app-active nav *, .App.app-active main *, .App.app-active .line-app, .App.app-active .app-contact{
+  transition: all 0.3s ease-in-out;
+  pointer-events: inherit;
+  opacity: 1;
+}
+
 /* side lines */
 .line-app{
   position: fixed;
@@ -38,7 +50,7 @@
   bottom: 240px;
 }
 .line-location{
-  right:-120px;
+  right: -120px;
   bottom: 200px;
   transform: rotate(90deg);
 }
@@ -51,10 +63,10 @@
   width: 24px;
   height: 24px;
   transform: rotate(-90deg);
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
-/* contact */
+/* contact button */
 .app-contact{
   position: fixed;
   bottom: 8px;
@@ -93,7 +105,7 @@
 /* SECTION */
 .section{
   width: 80%;
-  min-height: 100vh;
+  min-height: 80vh;
   margin-top: 40px;
   display: flex;
   flex-direction: column;

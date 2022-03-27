@@ -57,7 +57,11 @@ const About = () => {
             </p>
             <ul className="content-list">
               {hobbies.map((hobby, index) => {
-                return <li className="list-item">{hobby}</li>;
+                return (
+                  <li key={index} className="list-item">
+                    {hobby}
+                  </li>
+                );
               })}
             </ul>
           </div>
