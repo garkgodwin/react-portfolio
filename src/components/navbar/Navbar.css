@@ -1,0 +1,121 @@
+.Navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 0 120px;
+}
+/* LOGO */
+.navbar-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-10);
+  background-color: var(--color-10);
+  outline: none;
+  border: none;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 24px;
+  z-index: 1000;
+}
+
+/* NAVBAR MIDDLE */
+.navbar-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Menu Toggler */
+.navbar-menu-toggle{
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: none;
+  z-index: 1000;
+}
+.navbar-menu-toggle img{
+  width: 24px;
+  height: 24px;
+}
+
+
+/* MENU */
+.navbar-menu{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 16px var(--color-10);
+  background-color: var(--color-30);
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.menu-item{
+  text-decoration: none;
+  color: var(--color-white);
+  margin: 0 8px;
+  height: 100%;
+  width: auto;
+  padding: 16px;
+  transition: all 1s ease-in-out;
+  background-color: transparent;
+  z-index: 900;
+}
+.item-text{
+  font-size: 14px;
+  color: var(--color-white);
+  transition: all 1s ease-out;
+}
+.menu-item-active .item-text{
+  color: var(--color-black);
+}
+/* menu circle */
+.menu-circle{
+  transition: all 0.3s ease-in-out;
+  min-width: 40px;
+  height: 100%;
+  left: -100%;
+  top: 8px;
+  border-radius: inherit;
+  background-color: var(--color-10);
+  opacity: 0.5;
+  position: absolute;
+  z-index: 800;
+}
+
+@media only screen and (max-width: 769px){
+  .Navbar{
+    margin: 0;
+    padding: 8px;
+    align-items: center;
+  }
+
+  .navbar-menu-toggle{
+    display: block;
+  }
+
+  .navbar-menu{
+    opacity: 0.3;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    margin-top: -200px;
+  }
+
+  .navbar-menu.navbar-menu-active{
+    margin-top: 200px;
+    opacity: 1;
+  }
+}

@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  width: 99vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  position: relative;
+  scroll-behavior: smooth;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* side lines */
+.line-app{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line-app .line{
+  width: 120px;
+  height: 1px;
+  background-color: var(--color-10);
+  margin-right: 8px;
+}
+.line-app .line-text{
+  font-size: 12px;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  color: var(--color-10);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line-email{
+  background-color: transparent;
+  color: var(--color-10);
+  transform: rotate(90deg);
+  left: -140px;
+  bottom: 240px;
+}
+.line-location{
+  right:-120px;
+  bottom: 200px;
+  transform: rotate(90deg);
+}
+
+.line-location .line-text{
+  text-transform: capitalize;
+  letter-spacing: 4px;
+}
+.line-location .line-image{
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+  margin-right: 4px;
+}
+
+/* contact */
+.app-contact{
+  position: fixed;
+  bottom: 8px;
+  right: 32px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  width: auto;
+  height: auto;
+  background-color: var(--color-black);
+  color: var(--color-10);
+  box-shadow: 0 0 16px var(--color-10);
+  font-size: 16px;
+  text-transform: lowercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.app-contact:hover{
+  background-color: var(--color-10);
+  color: var(--color-black);
+  box-shadow: 0 0 16px var(--color-black);
+
+}
+
+/* PAGE */
+.Page{
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+/* SECTION */
+.section{
+  width: 80%;
+  min-height: 100vh;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.section-intro{
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 769) {
+    .section{
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
 }

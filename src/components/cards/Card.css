@@ -1,0 +1,34 @@
+.Card{
+  margin: 8px;
+  padding: 8px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 8px rgba(0,0,0,1);
+  transition: all 0.5s ease-in-out;
+  background-color: var(--color-30);
+}
+.card-light{
+  background-color: var(--color-white);
+}
+.card-light .card-text{
+  color: var(--color-30)
+}
+.card-image{
+  width: 60px;
+  height: 60px;
+}
+.card-text{
+  color: var(--color-10);
+  margin-top: 8px;
+  font-size: 20px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Hover */
+.Card:hover{
+  box-shadow: 0 0 0 var(--color-30);
+}

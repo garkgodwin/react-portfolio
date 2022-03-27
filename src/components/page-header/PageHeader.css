@@ -1,0 +1,27 @@
+.page-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
+  align-self: flex-start;
+  user-select: none !important;
+  -moz-user-select: none !important;
+}
+.page-title{
+  font-size: 120px;
+  align-items: flex-start;
+}
+.page-subtitle{
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: 'Chakra Petch', sans-serif;
+  text-align: start;
+}
+
+
+@media only screen and (max-width: 769px){
+  .page-title{
+    font-size: 80px;
+  }
+}
