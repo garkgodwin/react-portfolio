@@ -18,7 +18,6 @@ div.Loading.loading-active{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: gradi;
 }
 
 .Loading .logo{
