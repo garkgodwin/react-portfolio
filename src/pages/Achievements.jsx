@@ -16,6 +16,7 @@ const Achievements = () => {
           subtitle={achievementsHeader.subtitle}
         />
       </section>
+      <section className="section"></section>
     </main>
   );
 };

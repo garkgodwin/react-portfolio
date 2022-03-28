@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../buttons/Button";
 import menuIcon from "../../assets/menu.svg";
+import logoIcon from "../../assets/logo.svg";
 
 const links = [
   {
@@ -46,6 +47,7 @@ const Navbar = () => {
     } else {
       bounds = document.getElementById("ablink").getBoundingClientRect();
     }
+
     const newBounds = {
       left: Math.abs(navbarMenu.left - bounds.left) + "px",
       top: Math.abs(navbarMenu.top - bounds.top) + "px",
@@ -58,6 +60,7 @@ const Navbar = () => {
   const resumeClicked = () => {
     console.log("add code block for resumeClicked");
   };
+
   const moveMenu = (e) => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
@@ -66,7 +69,7 @@ const Navbar = () => {
   return (
     <nav className="Navbar">
       <button className="navbar-logo">
-        <span className="logo">G</span>
+        <img src={logoIcon} alt="Logo" />
       </button>
       <div className="navbar-middle">
         <button className="navbar-menu-toggle" onClick={(e) => moveMenu(e)}>
