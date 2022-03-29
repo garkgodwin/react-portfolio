@@ -1,10 +1,9 @@
 .page-header{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 80%;
-  align-self: flex-start;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   user-select: none !important;
   -moz-user-select: none !important;
 }
@@ -16,7 +15,7 @@
   font-size: 24px;
   letter-spacing: 2px;
   font-family: 'Chakra Petch', sans-serif;
-  text-align: start;
+  text-align: center;
 }
 
 

@@ -16,7 +16,16 @@ const Achievements = () => {
           subtitle={achievementsHeader.subtitle}
         />
       </section>
-      <section className="section"></section>
+      <section className="section section-achievements">
+        <div className="section-header">
+          <span className="section-title">School</span>
+        </div>
+        <div className="section-content">
+          <div className="school-content content-1">Elementary data</div>
+          <div className="school-content content-2">Highschool data</div>
+          <div className="school-content content-3">College data</div>
+        </div>
+      </section>
     </main>
   );
 };

@@ -16,11 +16,13 @@ const links = [
     to: "/achievements",
     text: "my achievements",
   },
+  /* removed this since projects is already in achievements
   {
     id: "prlink",
     to: "/projects",
     text: "projects",
   },
+  */
 ];
 
 const Navbar = () => {
