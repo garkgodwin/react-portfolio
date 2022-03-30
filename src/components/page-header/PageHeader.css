@@ -9,7 +9,8 @@
 }
 .page-title{
   font-size: 100px;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 .page-subtitle{
   font-size: 24px;

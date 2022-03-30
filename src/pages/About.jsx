@@ -10,7 +10,7 @@ import mongodb from "../assets/mongodb.png";
 
 //?Components
 import Button from "../components/buttons/Button";
-import PageHeader from "../components/page-header";
+import PageHeader from "../components/page-header/PageHeader";
 import Card from "../components/cards/Card";
 
 const aboutHeader = {
@@ -38,7 +38,7 @@ const About = () => {
       </section>
       <section className="section">
         <div className="section-header">
-          <span className="section-title">My hobbies</span>
+          <h2 className="section-title">My hobbies</h2>
         </div>
         <div className="section-contents">
           <div className="section-content content-left">
@@ -76,7 +76,7 @@ const About = () => {
 
       <section className="section">
         <div className="section-header">
-          <span className="section-title">My skills</span>
+          <h2 className="section-title">My skills</h2>
         </div>
         <div className="section-contents">
           <div className="section-content content-left">

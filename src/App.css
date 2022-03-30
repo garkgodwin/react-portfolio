@@ -1,5 +1,5 @@
 .App{
-  width: 99vw;
+  max-width: 90vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,8 +26,10 @@
 .line-app{
   position: fixed;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  transform: rotate(-90deg);
 }
 .line-app .line{
   width: 120px;
@@ -43,18 +45,22 @@
 }
 
 .line-email{
-  background-color: transparent;
+  z-index: 1000;
+  padding: 8px;
+  flex-direction: row;
   color: var(--color-10);
-  transform: rotate(90deg);
-  left: -140px;
-  bottom: 240px;
+  bottom: 120px;
+  left: -160px;
 }
 .line-location{
   right: -120px;
-  bottom: 200px;
-  transform: rotate(90deg);
+  bottom: 120px;
+  flex-direction: row;
 }
 
+.line-location .line{
+  height: 1px;
+}
 .line-location .line-text{
   text-transform: capitalize;
   letter-spacing: 4px;
@@ -66,34 +72,10 @@
   margin-right: 8px;
 }
 
-/* contact button */
-.app-contact{
-  position: fixed;
-  bottom: 8px;
-  right: 32px;
-  outline: none;
-  border: none;
-  padding: 8px;
-  width: auto;
-  height: auto;
-  background-color: var(--color-black);
-  color: var(--color-10);
-  box-shadow: 0 0 16px var(--color-10);
-  font-size: 16px;
-  text-transform: lowercase;
-  transition: all 0.2s ease-in-out;
-  z-index: 1000;
-}
-.app-contact:hover{
-  background-color: var(--color-10);
-  color: var(--color-black);
-  box-shadow: 0 0 16px var(--color-black);
-
-}
 
 /* PAGE */
 .Page{
-  max-width: 100vw;
+  max-width: 90vw;
   min-height: 110vh;
   display: flex;
   flex-direction: column;
@@ -142,9 +124,13 @@
 }
 
 
-@media only screen and (max-width: 769) {
+@media only screen and (max-width: 769px) {
     .section{
       justify-content: flex-start;
       align-items: flex-start;
+    }
+
+    .section-title{
+      font-size: 24px !important;
     }
 }

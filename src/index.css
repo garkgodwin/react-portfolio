@@ -22,6 +22,10 @@ html, body, #root{
   scroll-behavior: smooth;
   position: relative;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body::-webkit-scrollbar {
   width: 0;
