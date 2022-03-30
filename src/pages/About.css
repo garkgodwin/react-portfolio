@@ -49,30 +49,41 @@
 
 .content-right{
   width: 50%;
-  height: auto;
-  justify-content: flex-end;
-  align-items: flex-end;
+  height: 100%;
   padding: 32px;
   position: relative;
 }
-.content-right-image{
-  width: auto;
+
+.content-image{
+  width: 100%;
   height: 400px;
+  position: relative;
+}
+
+.image{
+  min-width: 350px;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-10);
   padding: 0;
+  margin: 0;
+}
+.image-bg{
+  min-width: 350px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-10);
+  left: 0;
+  top: 0;
+  opacity: 0.5 !important;
+}
+.content-image:hover .image-bg{
+  opacity: 0.1 !important;
 }
 
-.content-right-image img{
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  opacity: 0.6;
-  transition: all 0.2s ease-in-out;
-}
 
-.content-right-image img:hover{
-  opacity: 1;
-}
+
 @media only screen and (max-width: 769px){
   .content-left, .content-right{
     width: 100%;

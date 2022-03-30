@@ -66,8 +66,9 @@ const About = () => {
             </ul>
           </div>
           <div className="section-content content-right">
-            <div className="content-right-image">
+            <div className="content-image">
               <img src={me1} alt="Me" className="image" />
+              <div className="image-bg" />
             </div>
           </div>
         </div>
