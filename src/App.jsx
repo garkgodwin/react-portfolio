@@ -12,6 +12,7 @@ import About from "./pages/About";
 //? Images
 import marker from "./assets/marker.svg";
 import Loading from "./Loading";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
         <img src={marker} alt="Location" className="line-image" />
         <span className="line-text">Philippines</span>
       </div>
+      <Footer />
     </div>
   );
 };

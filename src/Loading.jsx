@@ -3,7 +3,11 @@ import "./Loading.css";
 
 const Loading = ({ isLoading }) => {
   return (
-    <div className={"Loading" + (isLoading ? " loading-active" : "")}>
+    <div
+      className={
+        "Loading" + (isLoading ? " loading-active" : " loading-stopped")
+      }
+    >
       <div className="logo">
         <div className="box box-1"></div>
         <div className="box box-2"></div>

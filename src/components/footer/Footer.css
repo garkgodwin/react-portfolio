@@ -1,0 +1,24 @@
+footer{
+  height: 80px;
+  width: 80vw;
+  background-color: transparent;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-links{
+  margin: 8px;
+}
+
+.social-link{
+  margin: 0 8px;
+  width: 24px;
+  height: 24px;
+}
+.social-link img{
+  height: inherit;
+  width: inherit;
+}
