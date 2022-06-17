@@ -5,7 +5,7 @@ import logoSo from "../../assets/logo_so.svg";
 import logoLi from "../../assets/logo_li.png";
 import logoGh from "../../assets/logo_gh.png";
 
-const Footer = () => {
+const Footer = ({ isLoading }) => {
   const socialLinks = [
     {
       url: "https://www.facebook.com/grakgdowin",
@@ -25,7 +25,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer>
+    <footer className={"Footer" + (isLoading ? " footer-loading" : "")}>
       <div className="social-links">
         {socialLinks.map((link, index) => {
           return (

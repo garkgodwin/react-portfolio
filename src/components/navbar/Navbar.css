@@ -14,22 +14,22 @@
 }
 /* LOGO */
 .navbar-logo{
+  outline: none;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px !important;
   height: 40px;
-  box-shadow: 0 0px 4px var(--color-10);
-  background-color: var(--color-10);
-  outline: none;
-  border: none;
+  border-radius: 50%;
+  background-color: transparent;
   font-size: 24px;
   z-index: 1000;
   padding: 12px;
+  position: relative;
 }
-
 .navbar-logo:hover{
-  box-shadow: 0 0px 16px var(--color-10);
+  box-shadow: inset -4px -4px 16px var(--color-white), inset 4px 4px 16px var(--color-white), 4px -4px 4px var(--color-10), -4px 4px 4px var(--color-10);
 }
 
 .navbar-logo *{

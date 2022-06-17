@@ -20,7 +20,7 @@ const aboutHeader = {
 };
 const hobbies = ["Chess", "Mobile Games", "Foodtrip", "Coding"];
 
-const About = () => {
+const About = ({ isLoading }) => {
   const scrollBottom = () => {
     document.documentElement.scrollTo({
       top: document.documentElement.getBoundingClientRect().height,
@@ -32,11 +32,11 @@ const About = () => {
     window.open("https://github.com/garkgodwin", "_blank");
   };
   return (
-    <main className="Page page-about">
-      <section className="section section-intro">
+    <main className={"Page page-about" + (isLoading ? " page-loading" : "")}>
+      <section className="section section-1 section-intro">
         <PageHeader title={aboutHeader.title} subtitle={aboutHeader.subtitle} />
       </section>
-      <section className="section">
+      <section className="section section-2">
         <div className="section-header">
           <h2 className="section-title">My hobbies</h2>
         </div>
@@ -75,7 +75,7 @@ const About = () => {
         <Button text="Check out my social links!" cb={scrollBottom} />
       </section>
 
-      <section className="section">
+      <section className="section section-3">
         <div className="section-header">
           <h2 className="section-title">My skills</h2>
         </div>
@@ -107,7 +107,7 @@ const About = () => {
               for a full-stack website project. NodeJs and ExpressJs helped me
               create server applications. With its over 1.3 million packages, I
               found some to be used for my applications such as jsonewebtoken
-              which generages and decrypts tokens.
+              which generates and decrypts tokens for user authentications.
             </p>
             <p className="content-text">
               With ReactJs, I designed multiple client applications starting
@@ -115,9 +115,9 @@ const About = () => {
               portfolio was built with ReactJs.
             </p>
             <p className="content-text">
-              I had encountered finger-counted databases such as MySQL database
-              and Mongo database. But, I found MongoDb to be more comfortable
-              and easier to use.
+              I had encountered few databases such as MySQL, MongoDb, Firebase,
+              and PostgreSQL. But, I found MongoDb to be more comfortable and
+              easier to use.
             </p>
           </div>
         </div>

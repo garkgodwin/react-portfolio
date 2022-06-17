@@ -11,8 +11,9 @@ import About from "./pages/About";
 
 //? Images
 import marker from "./assets/marker.svg";
-import Loading from "./Loading";
+import Loading from "./components/loading/Loading";
 import Footer from "./components/footer/Footer";
+import Background from "./components/background/Background";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,19 +25,25 @@ const App = () => {
   }, []);
   return (
     <div className={"App" + (!isLoading ? " app-active" : "")}>
-      <Loading isLoading={isLoading} />
-      <Navbar />
-      <About />
-      <div className="line-app line-email">
-        <div className="line"></div>
-        <p className="line-text">garkgodwinduque@gmail.com</p>
-      </div>
-      <div className="line-app line-location">
-        <div className="line"></div>
-        <img src={marker} alt="Location" className="line-image" />
-        <span className="line-text">Philippines</span>
-      </div>
-      <Footer />
+      {isLoading ? (
+        <Loading isLoading={isLoading} />
+      ) : (
+        <>
+          <Background />
+          <Navbar />
+          <About isLoading={isLoading} />
+          <div className="line-app line-email">
+            <div className="line"></div>
+            <p className="line-text">garkgodwinduque@gmail.com</p>
+          </div>
+          <div className="line-app line-location">
+            <div className="line"></div>
+            <img src={marker} alt="Location" className="line-image" />
+            <span className="line-text">Philippines</span>
+          </div>
+          <Footer isLoading={isLoading} />
+        </>
+      )}
     </div>
   );
 };

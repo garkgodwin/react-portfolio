@@ -1,4 +1,4 @@
-footer{
+.Footer{
   height: 80px;
   width: 80vw;
   background-color: transparent;
@@ -7,6 +7,12 @@ footer{
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  z-index: 1000;
+  margin-top: 40px;
+}
+
+.Footer.footer-loading{
+  display: none;
 }
 
 .social-links{

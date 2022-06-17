@@ -1,0 +1,76 @@
+.Background{
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--color-30);
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-box{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: slategray;
+  opacity: 0.1;
+  border-radius: 8px;
+}
+
+.bg-box.box-1{
+  top: 240px;
+  left: 120px;
+  animation: rotate1 4s linear 0s infinite alternate-reverse forwards;
+}
+.bg-box.box-2{
+  top: 600px;
+  left: 90%;
+  animation: slide1 2.5s linear 0s infinite alternate-reverse forwards;
+}
+
+@keyframes rotate1 {
+  from{
+    transform: rotate(0) skew(0);
+    left: 120px;
+  }
+  to{
+    transform: rotate(360deg) skew(20deg);
+    left: 240px;
+  }
+}
+@keyframes slide1 {
+  from{
+    width: 100px;
+    top: 600px;
+  }
+  to{
+    width: 20px;
+    top: 200px;
+  }
+  
+}
+
+.dot{
+  background-color: var(--color-10);
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  transition: all 2s ease-in-out;
+  animation: changeDotOpacity 2s linear 0s infinite alternate forwards;
+}
+
+@keyframes changeDotOpacity {
+  from{
+    opacity: 0.1;
+    box-shadow: 0 0 0px white;
+  }
+  to{
+    opacity: 0.5;
+    box-shadow: 0 0 8px white;
+  }
+}
