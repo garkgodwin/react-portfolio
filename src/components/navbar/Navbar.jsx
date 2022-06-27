@@ -1,16 +1,10 @@
 import React from "react";
 import "./Navbar.css";
-import Button from "../buttons/Button";
 import logoIcon from "../../assets/logo-main.svg";
 
+import ResumePDF from "../../assets/resume.pdf";
+
 const Navbar = () => {
-  const resumeClicked = () => {
-    console.log("add code block for resumeClicked");
-  };
-  const contactClicked = () => {
-    console.log("add code block for contactClicked");
-    const mail = document.getElementById();
-  };
 
   return (
     <nav className="Navbar">
@@ -18,7 +12,7 @@ const Navbar = () => {
         <img src={logoIcon} alt="Logo" />
       </button>
       <div className="navbar-menu">
-        <a className="nav-link">My resume</a>
+        <a className="nav-link" href={ResumePDF} target="_blank" rel="noopener noreferrer">My resume</a>
         <a className="nav-link" href="mailto:garkgodwinduque@gmail.com">
           Say hi!
         </a>
